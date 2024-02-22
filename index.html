@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denkrypt</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="algorithm-container" id="home" style="display:block">
+        <div id="result">
+            <h2>Denkrypt</h2>
+            <img src="logo.png" alt="logo">
+          </div>
+        <h1>Select Algorithm</h1>
+        <button class="btn" onclick="show('des-page')">DES</button>
+        <button class="btn" onclick="show('aes-page')">AES</button>
+        <button class="btn" onclick="show('tdes-page')">3DES</button>
+      </div>
+
+    <div class="algorithm-container" id="des-page" style="display:none">
+        <button class="back-btn" onclick="show('home')">Back</button>
+
+        <h1>DES</h1>
+
+        <label for="des-plain-text">Enter Plain Text:</label>
+        <input type="text" id="des-plain-text" placeholder="plain text">
+
+        <label for="des-cipher-text">Enter Cipher Text:</label>
+        <input type="text" id="des-cipher-text" placeholder="cipher text">
+
+        <label for="des-secret-Key">Enter Secret Key:</label>
+        <input type="password" id="des-secret-key" placeholder="secret key">
+
+        <label for="des-result">Result:</label>
+        <input type="text" id="des-result" readonly>
+
+        <button class="btn" onclick="encrypt('des')">Encrypt</button>
+        <button class="btn" onclick="decrypt('des')">Decrypt</button>
+    </div>
+
+    <div class="algorithm-container" id="aes-page" style="display:none">
+
+        <button class="back-btn" onclick="show('home')">Back</button>
+
+        <h1>AES</h1>
+
+        <label for="aes-plain-text">Enter Plain Text:</label>
+        <input type="text" id="aes-plain-text" placeholder="plain text">
+
+        <label for="aes-cipher-text">Enter Cipher Text:</label>
+        <input type="text" id="aes-cipher-text" placeholder="cipher text">
+
+        <label for="aes-secret-Key">Enter Secret Key:</label>
+        <input type="password" id="aes-secret-key" placeholder="secret key">
+
+        <label for="aes-result">Result:</label>
+        <input type="text" id="aes-result" readonly>
+
+        <button class="btn" onclick="encrypt('aes')">Encrypt</button>
+        <button class="btn" onclick="decrypt('aes')">Decrypt</button>
+    </div>
+
+    <div class="algorithm-container" id="tdes-page" style="display:none">
+
+        <button class="back-btn" onclick="show('home')">Back</button>
+
+        <h1>3DES</h1>
+
+        <label for="tripledes-plain-text">Enter Plain Text:</label>
+        <input type="text" id="tripledes-plain-text" placeholder="plain text">
+
+        <label for="tripledes-cipher-text">Enter Cipher Text:</label>
+        <input type="text" id="tripledes-cipher-text" placeholder="cipher text">
+
+        <label for="tripledes-secret-Key">Enter Secret Key:</label>
+        <input type="password" id="tripledes-secret-key" placeholder="secret key">
+
+        <label for="tripledes-result">Result:</label>
+        <input type="text" id="tripledes-result" readonly>
+
+        <button class="btn" onclick="encrypt('tripledes')">Encrypt</button>
+        <button class="btn" onclick="decrypt('tripledes')">Decrypt</button>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
